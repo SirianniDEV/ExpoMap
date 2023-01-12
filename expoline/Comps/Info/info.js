@@ -7,6 +7,8 @@ padding: 25px;
 margin: 15px;
 border-radius: 5px;
 font-size: 14px;
+box-shadow: 3px 4px 7px 0px rgba(0,0,0,0.43);
+
 `
 export const Header = styled.p
 `

@@ -1,3 +1,4 @@
+
 import { MapContainer } from 'react-leaflet/MapContainer'
 import { TileLayer } from 'react-leaflet/TileLayer'
 import { Marker } from 'react-leaflet/Marker'
@@ -13,6 +14,7 @@ import { Polyline } from 'react-leaflet/Polyline'
 
 export default function Map (){
 
+    //to King George
     const waterfront = [49.28594, -123.11129]; 
     const Burrard = [49.285581150633966, -123.12012245876285];
     const Granville = [49.28276795358473, -123.1164699145821];
@@ -34,7 +36,13 @@ export default function Map (){
     const SurreyCentral = [49.18971392944762, -122.84792071458409];
     const KingGeorge = [49.1829310367517, -122.84473292807587];
 
-    const polyline = [
+    //to Production Way
+    const Sapperton = [49.224860238697396, -122.88949270294468];
+    const Braid = [49.23268213068468, -122.88456287225554];
+    const lougheedTownCentre = [49.24875892482227, -122.89717730665];
+    const productionWay = [49.25367827613695, -122.91868207173422];
+
+    const toKingGeorge = [
         [49.28594, -123.11129],
         [49.28558, -123.12012],
         [49.28276, -123.11646],
@@ -57,6 +65,15 @@ export default function Map (){
         [49.18293, -122.84473],
     ]
 
+    const toProductionWay = [
+        [49.20494, -122.90607],
+        [49.22486, -122.88949],
+        [49.23268, -122.88456],
+        [49.24875, -122.89717],
+        [49.25367, -122.91868],
+
+    ]
+
     const blueOption = {color: '#005DAA'};
     const destination = { color: '#5FBCDA' };
 
@@ -65,134 +82,167 @@ export default function Map (){
             <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            />
+                />
 
+            {/* To King George */}
             <Marker position={waterfront}>
                 <Popup>
-                Skytrain. <br/> Waterfront.
+                Waterfront Station
                 </Popup>
             </Marker>
 
             <Marker position={Burrard}>
                 <Popup>
-                Skytrain. <br/> Waterfront.
+                Burrard Station
                 </Popup>
             </Marker>
 
             <Marker position={Granville}>
                 <Popup>
-                Skytrain. <br/> Waterfront.
+                Granville Station
                 </Popup>
             </Marker>
 
             <Marker position={stadiumChinatown}>
                 <Popup>
-                Skytrain. <br/> Waterfront.
+                Stadium - Chinatown Station
                 </Popup>
             </Marker>
 
             <Marker position={CommercialBroadway}>
                 <Popup>
-                Skytrain. <br/> Waterfront.
+                Commercial-Broadway Station
                 </Popup>
             </Marker>
 
             <Marker position={MainStreet}>
                 <Popup>
-                Skytrain. <br/> Waterfront.
+                Skytrain. <br/> Waterfront.Station
                 </Popup>
             </Marker>
 
             <Marker position={Nanaimo}>
                 <Popup>
-                Skytrain. <br/> Waterfront.
+                MainStreet.Station
                 </Popup>
             </Marker>
 
             <Marker position={Avenue}>
                 <Popup>
-                Skytrain. <br/> Waterfront.
+                 29th Avenue Station
                 </Popup>
             </Marker>
 
             <Marker position={JoyceCollingwood}>
                 <Popup>
-                Skytrain. <br/> Waterfront.
+                Joyce-Collingwood Station
                 </Popup>
             </Marker>
 
             <Marker position={Patterson}>
                 <Popup>
-                Skytrain. <br/> Waterfront.
+                Patterson Station
                 </Popup>
             </Marker>
 
             <Marker position={Metrotown}>
                 <Popup>
-                Skytrain. <br/> Waterfront.
+                Metrotown Station
                 </Popup>
             </Marker>
 
             <Marker position={RoyalOak}>
                 <Popup>
-                Skytrain. <br/> Waterfront.
+                Royal Oak Station
                 </Popup>
             </Marker>
 
             <Marker position={Edmonds}>
                 <Popup>
-                Skytrain. <br/> Waterfront.
+                Edmonds Station
                 </Popup>
             </Marker>
 
             <Marker position={Street}>
                 <Popup>
-                Skytrain. <br/> Waterfront.
+                22nd Street Station
                 </Popup>
             </Marker>
 
             <Marker position={NewWestminster}>
                 <Popup>
-                Skytrain. <br/> Waterfront.
+                New Westminster Station
                 </Popup>
             </Marker>
 
             <Marker position={Columbia}>
                 <Popup>
-                Skytrain. <br/> Waterfront.
+                Columbia Station
                 </Popup>
             </Marker>
 
             <Marker position={ScottRoad}>
                 <Popup>
-                Skytrain. <br/> Waterfront.
+                Scott Road Station
                 </Popup>
             </Marker>
 
             <Marker position={Gateway}>
                 <Popup>
-                Skytrain. <br/> Waterfront.
+                Gateway Station
                 </Popup>
             </Marker>
 
             <Marker position={SurreyCentral}>
                 <Popup>
-                Skytrain. <br/> Waterfront.
+                Surrey Central Station
                 </Popup>
             </Marker>
 
             <Marker position={KingGeorge}>
                 <Popup>
-                Skytrain. <br/> Waterfront.
+                King George Station
                 </Popup>
             </Marker>
 
 
+            {/* To Production Way */}
+            <Marker position={Sapperton}>
+                <Popup>
+                Sapperton Station
+                </Popup>
+            </Marker>
+
+            <Marker position={Braid}>
+                <Popup>
+                Braid Station
+                </Popup>
+            </Marker>
+
+            <Marker position={lougheedTownCentre}>
+                <Popup>
+                Lougheed Town Centre Station
+                </Popup>
+            </Marker>
+
+            <Marker position={productionWay}>
+                <Popup>
+                Production Way - University
+                </Popup>
+            </Marker>
+            
+
+            {/* //destination */}
             <CircleMarker center={[49.18293, -122.84473]} pathOptions={destination} radius={15}>
-                <Popup>You reached your destination!</Popup>
+                <Popup>You reached the end of the Expo line at King George!</Popup>
             </CircleMarker>
 
-            <Polyline pathOptions={blueOption} positions={polyline}/>
+            <CircleMarker center={[49.25367, -122.91868]} pathOptions={destination} radius={15}>
+                <Popup>You reached the end of the Expo line at Profuction Way!</Popup>
+            </CircleMarker>
+
+            <Polyline pathOptions={blueOption} positions={toKingGeorge}/>
+            <Polyline pathOptions={blueOption} positions={toProductionWay}/>
 
 
         </MapContainer>
