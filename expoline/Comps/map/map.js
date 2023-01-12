@@ -116,7 +116,7 @@ export default function Map (){
 
             <Marker position={MainStreet}>
                 <Popup>
-                Skytrain. <br/> Waterfront.Station
+                 Main Street Station
                 </Popup>
             </Marker>
 
