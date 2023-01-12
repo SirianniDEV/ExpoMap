@@ -4,8 +4,8 @@ import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility
 
 import style from '../../styles/Home.module.css'
 
-import { MapContainer, TileLayer, useMap, Marker, Popup, Polyline, CircleMarker } from 'react-leaflet'
-import { polyline } from 'leaflet'
+import { MapContainer, TileLayer, Marker, Popup, Polyline, CircleMarker } from 'react-leaflet'
+
 
 export default function Map (){
 
@@ -34,6 +34,7 @@ export default function Map (){
     ]
 
     const blueOption = {color: '#005DAA'};
+    const destination = { color: '#5FBCDA' };
 
     return (
         <MapContainer className={style.map} center={waterfront} zoom={14} scrollWheelZoom={true}>
@@ -42,13 +43,18 @@ export default function Map (){
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
 
-            <Marker position={waterfront}>
+            <Marker position={[49.285581150633966, -123.12012245876285]}>
                 <Popup>
                 Skytrain. <br/> Waterfront.
                 </Popup>
             </Marker>
 
+            <CircleMarker center={[49.18293, -122.84473]} pathOptions={destination} radius={15}>
+                <Popup>You reached your destination!</Popup>
+            </CircleMarker>
+
             <Polyline pathOptions={blueOption} positions={polyline}/>
+
 
         </MapContainer>
 
