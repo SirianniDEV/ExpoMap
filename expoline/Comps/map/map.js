@@ -1,12 +1,12 @@
 
+import 'leaflet/dist/leaflet.css'
+import 'leaflet-defaulticon-compatibility'
+import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css'
 import { MapContainer } from 'react-leaflet/MapContainer'
 import { TileLayer } from 'react-leaflet/TileLayer'
 import { Marker } from 'react-leaflet/Marker'
 import { Popup } from 'react-leaflet/Popup'
 import style from '../../styles/Home.module.css'
-import 'leaflet/dist/leaflet.css'
-import 'leaflet-defaulticon-compatibility'
-import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css'
 import { CircleMarker } from 'react-leaflet/CircleMarker'
 import { Polyline } from 'react-leaflet/Polyline'
 
