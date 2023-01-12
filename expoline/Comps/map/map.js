@@ -237,7 +237,7 @@ export default function Map (){
             </CircleMarker>
 
             <CircleMarker center={[49.25367, -122.91868]} pathOptions={destination} radius={15}>
-                <Popup>You reached the end of the Expo line at Profuction Way!</Popup>
+                <Popup>You reached the end of the Expo line at Production Way!</Popup>
             </CircleMarker>
 
             <Polyline pathOptions={blueOption} positions={toKingGeorge}/>
